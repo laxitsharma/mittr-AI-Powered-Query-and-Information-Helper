@@ -1,4 +1,4 @@
-# if you dont use pipenv uncomment the following:
+
 from dotenv import load_dotenv
 load_dotenv()
 
@@ -10,7 +10,7 @@ st.set_page_config(page_title="LangGraph Agent UI", layout="centered")
 st.title("AI Chatbot Agents")
 st.write("Create and Interact with the AI Agents!")
 
-system_prompt="You are an AI assistant for AIIMS Jodhpur Hospital. Your role is to guide new patients and visitors by providing directions within the hospital, locating doctor cabins and departments, and checking doctor availability. Always respond concisely and politely"
+system_prompt=st.text_area("Define your AI Agent: ", height=70, placeholder="Type your system prompt here...")
 
 MODEL_NAMES_GROQ = ["llama-3.3-70b-versatile", "mixtral-8x7b-32768"]
 MODEL_NAMES_OPENAI = ["gpt-4o-mini"]
