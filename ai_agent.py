@@ -1,4 +1,4 @@
-
+# if you dont use pipenv uncomment the following:
 from dotenv import load_dotenv
 load_dotenv()
 
@@ -51,27 +51,3 @@ def get_response_from_ai_agent(llm_id, query, allow_search, system_prompt, provi
 
 
 
-
-#     agent=create_react_agent(
-#         model=llm,
-#         tools=tools,
-#         state_modifier=system_prompt
-#     )
-#     state={"messages": query}
-#     response=agent.invoke(state)
-#     messages=response.get("messages")
-#     ai_messages=[message.content for message in messages if isinstance(message, AIMessage)]
-#     return ai_messages[-1]
-
-
-
-# if __name__ == "__main__":
-#     query = [{"role": "user", "content": "hi, how are you?"}]
-#     response = get_response_from_ai_agent(
-#         llm_id="llama3-70b-8192",  # or "gpt-4o-mini"
-#         query=query,
-#         allow_search=False,
-#         system_prompt=system_prompt,
-#         provider="Groq"  # or "OpenAI"
-#     )
-#     print("AI Response:", response)
